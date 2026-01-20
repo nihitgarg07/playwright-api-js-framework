@@ -17,12 +17,24 @@ async post(endPoint,body=null){
     
 }
 
-async put(endPoint){
-    return await this.apiContext.put(endPoint)
+async put(endPoint,body=null){
+    if(body){
+            return await this.apiContext.put(endPoint,{data:body})
+    }
+    else{
+        return await this.apiContext.put(endPoint)
+    }
+    
 }
 
-async patch(endPoint){
-    return await this.apiContext.patch(endPoint)
+async patch(endPoint,body=null){
+    if(body){
+        return await this.apiContext.patch(endPoint,{data:body})
+    }
+    else{
+        return await this.apiContext.patch(endPoint)
+    }
+    
 }
 
 }

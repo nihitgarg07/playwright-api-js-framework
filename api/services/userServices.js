@@ -20,6 +20,14 @@ async getBooking(id){
     return await this.ApiClient.get(`/booking/${id}`)
 }
 
+async updateBookingData(id){
+    return await this.ApiClient.put(`/booking/${id}`,this.tokenData)
+}
+
+async partialUpdateBookindData(id){
+    return await this.ApiClient.patch(`/booking/${id}`,this.tokenData)
+}
+
 }
 
 module.exports = {UserServices}
