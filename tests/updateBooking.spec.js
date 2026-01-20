@@ -39,9 +39,9 @@ test("Validate full Booking Update", async()=>{
 
     const PatchService = new UserServices(apiContext,{"firstname" : "UN","lastname" : "Brown"})
     const putResponse = await PatchService.partialUpdateBookindData(692)
-    console.log(await putResponse.json())
-   
-
-
+    const putResponseData = await putResponse.json()
+    expect(putResponse.status()).toBe(200)
+    expect(putResponseData.firstname).toContain("UN")
+    expect(putResponseData.lastname).toContain("Br")
 
     })
