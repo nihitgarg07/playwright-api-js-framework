@@ -44,28 +44,26 @@ playwright-api-miniProject/
 
 ```
 
-🧠 Framework Design Approach
-🔹 Client Layer (apiClient.js)
+---
 
-Wraps Playwright APIRequestContext
+## 🧠 Framework Design Approach
 
-Exposes reusable HTTP methods
+### 🔹 Client Layer (`apiClient.js`)
+- Wraps Playwright `APIRequestContext`
+- Exposes reusable HTTP methods (`get`, `post`, `put`, `patch`, `delete`)
+- Centralizes HTTP request handling
 
-Centralizes request handling
+### 🔹 Service Layer (`userServices.js`)
+- Contains business-level API logic
+- Uses `ApiClient` internally
+- Keeps API details out of test files
 
-🔹 Service Layer (userServices.js)
+### 🔹 Test Layer (`tests/*.spec.js`)
+- Focuses only on test flow and assertions
+- Calls service-layer methods
+- No raw HTTP calls inside test files
 
-Contains business-level API logic
-
-Uses ApiClient internally
-
-Keeps test layer clean
-
-🔹 Test Layer (tests/*.spec.js)
-
-Focuses only on test flow & assertions
-
-No direct HTTP calls
+---
 
 🌱 Environment Configuration
 .env file
