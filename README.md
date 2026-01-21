@@ -18,6 +18,7 @@
 
 ## 📁 Project Structure
 
+```text
 playwright-api-miniProject/
 │
 ├── api/
@@ -94,6 +95,7 @@ extraHTTPHeaders: {
   Cookie: `token=${token}`
 }
 🌱 Environment Configuration
+```js
 .env file
 BASE_URL=https://restful-booker.herokuapp.com
 Loaded using dotenv in Playwright config
