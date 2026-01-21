@@ -42,6 +42,8 @@ playwright-api-miniProject/
 ├── .gitignore
 └── README.md
 
+```
+
 🧠 Framework Design Approach
 🔹 Client Layer (apiClient.js)
 
