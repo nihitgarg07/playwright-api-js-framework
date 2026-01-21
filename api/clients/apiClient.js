@@ -34,7 +34,10 @@ async patch(endPoint,body=null){
     else{
         return await this.apiContext.patch(endPoint)
     }
-    
+}
+
+async delete(endPoint){
+    return await this.apiContext.delete(endPoint)
 }
 
 }

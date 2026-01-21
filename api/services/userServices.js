@@ -28,6 +28,10 @@ async partialUpdateBookindData(id){
     return await this.ApiClient.patch(`/booking/${id}`,this.tokenData)
 }
 
+async deleteBooking(id){
+    return await this.ApiClient.delete(`/booking/${id}`)
+}
+
 }
 
 module.exports = {UserServices}
