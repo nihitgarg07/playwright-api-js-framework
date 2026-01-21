@@ -65,39 +65,39 @@ playwright-api-miniProject/
 
 ---
 
-🌱 Environment Configuration
-.env file
-BASE_URL=https://restful-booker.herokuapp.com
+## 🌱 Environment Configuration
+    .env file
+    BASE_URL=https://restful-booker.herokuapp.com
 
 
-Loaded using dotenv inside Playwright config:
+    Loaded using dotenv inside Playwright config:
 
-require('dotenv').config();
+    require('dotenv').config();
 
-▶️ How to Run Tests
-Install dependencies
-npm install
+## ▶️ How to Run Tests
+### Install dependencies
+    npm install
 
-Run all tests
-npx playwright test
+### Run all tests
+    npx playwright test
 
-Run a single test
-npx playwright test tests/deleteBooking.spec.js
+### Run a single test
+    npx playwright test tests/deleteBooking.spec.js
 
-View HTML report
-npx playwright show-report
+### View HTML report
+    npx playwright show-report
 
-📌 Key Learnings from This Project
+## 📌 Key Learnings from This Project
 
-Difference between request fixture and request.newContext()
+    Difference between request fixture and request.newContext()
 
-Why APIRequestContext headers are immutable
+    Why APIRequestContext headers are immutable
 
-Proper handling of DELETE APIs (status + text, not JSON)
+    Proper handling of DELETE APIs (status + text, not JSON)
 
-Why 403 vs 405 errors occur
+    Why 403 vs 405 errors occur
 
-Importance of creating test data before deleting it
+    Importance of creating test data before deleting it
 
-Why DELETE APIs may fail for resources not created in the same lifecycle
+    Why DELETE APIs may fail for resources not created in the same lifecycle
 
