@@ -90,7 +90,7 @@ playwright-api-miniProject/
 - A **new APIRequestContext** is created after token generation
 - Contexts are disposed after use to avoid leaks
 
-```js
+```md
 extraHTTPHeaders: {
   Cookie: `token=${token}`
 }
